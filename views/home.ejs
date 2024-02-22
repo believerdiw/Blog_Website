@@ -1,0 +1,28 @@
+
+<%-include("header")-%>
+
+<h1>Home</h1>
+
+<p><%= initial %></p>
+<!-- <%console.log(array)%> -->
+
+
+
+
+
+<!-- <% for(var i=0;i<array.length;i++){ %>
+    <% console.log(array[i].mainpost);%>
+<% } %> -->
+
+<% array.forEach(function(elem){ %>
+    <!-- <% console.log(elem.maintitle) %> -->
+    <h1><%=elem.mainpost%></h1>
+    <p>
+        <%=elem.maintitle.substring(0,50) + "..."%> 
+        <a href="/posts/<%=elem.mainpost%>">read more</a>
+    </p>
+<%});%>
+
+
+
+<%-include("footer")-%>
